@@ -1,13 +1,15 @@
-<!DOCTYPE html><html lang="zh-TW"><head><title>PC Partner</title>
-<meta name="keywords" content="PC Partner" />
-<meta name="description" content="PC Partner" />
+<!DOCTYPE html><html lang="zh-CN"><head><title>企文亲子鉴定检验所</title>
+<meta name="keywords" content="企文亲子鉴定检验所" />
+<meta name="description" content="企文亲子鉴定检验所" />
 <meta http-equiv="content-language" content="zh-TW">
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/bootstrap.min.css"/>
 <link rel="stylesheet" href="css/bootstrap-xinqi.css"/>
 <link rel="stylesheet" href="css/animate.css"/>
-</head><body>
+</head>
+
+<body>
 <!--导航-->
 <nav class="navbar navbar-default">
     <div class="container">
@@ -41,7 +43,7 @@
 <div class="jumbotron banner wow fadeInRight"><div class="container">
 <h1>企文亲子鉴定检验所</h1>
 <p>企文亲子鉴定检验所1999年于安徽成立，逐渐发展成现在知名的亲子鉴定检验企业。</p>
-<p><a class="btn btn-success btn-lg" href="https://finance.yahoo.com/quote/1263.HK" role="button">报告结果查询(电子版<span id="shijia"></span>)</a></p>
+<p><a class="btn btn-success btn-lg" onclick="openForm()" role="button">报告结果查询(电子版<span id="shijia"></span>)</a></p>
 </div></div>
 </section>
 <!--home-->
@@ -181,6 +183,22 @@
 </section>
 <!--contact-->
 
+<!-- The form -->
+<div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h1>报告结果查询</h1>
+  
+      <label for="email"><b>报告号</b></label>
+      <input type="text" placeholder="输入报告号" name="email" required>
+  
+      <label for="psw"><b>身份证号</b></label>
+      <input type="password" placeholder="输入身份证号" name="psw" required>
+  
+      <button type="submit" class="btn">查询</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">关闭</button>
+    </form>
+  </div>
+
 <!--footer-->
 <footer>
     <div class="container">
@@ -256,5 +274,13 @@ document.write("成交价："+elements[10]+" HK$<br/>");
 document.write("成交量："+elements[12]+" 股<br/>");
 document.write("更新日期："+elements[17]+"<br/>");
 document.write("更新时间："+elements[18]+"<br/>"); */
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
 </script>
 </body></html>
