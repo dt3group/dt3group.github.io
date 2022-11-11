@@ -5,7 +5,7 @@
   <title>企文亲子鉴定检验所</title>
   <meta name="keywords" content="企文亲子鉴定检验所" />
   <meta name="description" content="企文亲子鉴定检验所" />
-  <meta http-equiv="content-language" content="zh-TW">
+  <meta http-equiv="content-language" content="zh-CN">
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -132,25 +132,25 @@
         <div class="col-md-3">
           <div class="course">
             <img class="case-img" src="images/case1.png" data-src="images/case1-xcxcode.jpg" class="img-responsive"
-              alt="消費電子產品" title="消費電子產品" />
+              alt="基因鉴定" title="基因鉴定" />
           </div>
         </div>
         <div class="col-md-3">
           <div class="course">
             <img class="case-img" src="images/case14.png" data-src="images/case14-xcxcode.jpg" class="img-responsive"
-              alt="企業雲端解決方案" title="企業雲端解決方案" />
+              alt="基因鉴定" title="基因鉴定案" />
           </div>
         </div>
         <div class="col-md-3">
           <div class="course">
             <img class="case-img" src="images/case16.png" data-src="images/case16-xcxcode.jpg" class="img-responsive"
-              alt="遊戲娛樂" title="遊戲娛樂" />
+              alt="基因鉴定" title="基因鉴定" />
           </div>
         </div>
         <div class="col-md-3">
           <div class="course">
             <img class="case-img" src="images/case17.png" data-src="images/case17-xcxcode.jpg" class="img-responsive"
-              alt="物聯網 （IoT）" title="物聯網 （IoT）" />
+              alt="基因检测" title="基因检测" />
           </div>
         </div>
       </div>
@@ -201,7 +201,7 @@
 
   <!-- The form -->
   <div class="form-popup" id="myForm">
-    <form action="/files/亲子鉴定书（完整版）.pdf" class="form-container" target="_blank">
+    <form action="/file/亲子鉴定书（完整版）.pdf" class="form-container" target="_blank">
       <h1>报告结果查询</h1>
 
       <label for="email"><b>报告号</b></label>
@@ -210,62 +210,15 @@
       <label for="psw"><b>身份证号</b></label>
       <input type="text" placeholder="输入身份证号" name="psw" required>
 
-      <button type="submit" class="btn" onclick="query()">查询</button>
+      <button type="submit" class="btn" onclick="closeForm()">查询</button>
       <button type="button" class="btn cancel" onclick="closeForm()">关闭</button>
     </form>
   </div>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <!--<script src="js/jquery.singlePageNav.min.js"></script>-->
-  <script src="js/wow.min.js"></script>
-  <script>
-    $(function () {
-      /*导航跳转效果插件*/
-      /*$('.nav').singlePageNav({
-          offset:70
-      });*/
-      /*小屏幕导航点击关闭菜单*/
-      /*$('.navbar-collapse a').click(function(){
-          $('.navbar-collapse').collapse('hide');
-      });*/
-      new WOW().init();
 
-      //鼠标滑过图片切换
-      /* var oldImageUrl = '';
-      $('.case-img').hover(function(){
-          oldImageUrl = $(this).attr('src');
-          $(this).attr('src', $(this).attr('data-src')).fadeIn();
-      },
-      function(){
-          $(this).attr('src', oldImageUrl).fadeIn();
-      }); */
-    });
-  </script>
-
-  <script type="text/javascript" src="http://hq.sinajs.cn/list=hk01263" charset="gb2312"></script>
   <script type="text/javascript">
-    function formatNum(num, n) {
-      //参数说明：num 要格式化的数字 n 保留小数位
-      num = String(num.toFixed(n));
-      var re = /(-?\d+)(\d{3})/;
-      while (re.test(num)) num = num.replace(re, "$1,$2")
-      return num;
-    }
-
-    var elements = hq_str_hk01263.split(",");
-    var today_open = elements[2];
-    var today_new = elements[6];
-
-    if (elements[2] == "0.000") {
-      today_open = "--";
-    }
-
-    var change = formatNum(today_new - elements[3], 3);
-    var change_p = formatNum(change / elements[3] * 100, 3);
-
-    $("#shijia").html(" 市價:" + today_new);
-
     function openForm() {
       document.getElementById("myForm").style.display = "block";
     }
